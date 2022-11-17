@@ -8,3 +8,4 @@ A python script for batch normalization of mp3 collections. This script makes us
 ## Usage
 
 ## Resources 
+[Splitting Audio Files using Silence Detection](https://stackoverflow.com/questions/45526996/split-audio-files-using-silence-detection)
