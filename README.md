@@ -30,3 +30,4 @@ pip install pydub rgain3
 
 ## Resources 
 [Splitting Audio Files using Silence Detection](https://stackoverflow.com/questions/45526996/split-audio-files-using-silence-detection)
+[ReplayGain](https://wiki.hydrogenaud.io/index.php/ReplayGain)
