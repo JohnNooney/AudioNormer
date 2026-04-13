@@ -28,6 +28,31 @@ pip install pydub rgain3
 ```
 ## Usage
 
+```shell
+python audio_normer.py <input_dir> [options]
+```
+
+| Option | Default | Description |
+|---|---|---|
+| `-o / --output-dir` | in-place | Write processed files here |
+| `--silence-threshold` | `-50.0` | dBFS cutoff for silence detection |
+| `--chunk-size` | `10` | ms chunk size for silence scan |
+| `--skip-silence-strip` | — | Skip pydub silence trimming |
+| `--skip-replaygain` | — | Skip rgain3 ReplayGain pass |
+
+**Examples**
+
+```shell
+# normalize in place
+python audio_normer.py ~/Music/Album
+
+# write to separate folder, stricter silence threshold
+python audio_normer.py ~/Music/Album -o ~/Music/Album_out --silence-threshold -40
+
+# ReplayGain only (no silence trimming)
+python audio_normer.py ~/Music/Album --skip-silence-strip
+```
+
 ## Resources 
 [Splitting Audio Files using Silence Detection](https://stackoverflow.com/questions/45526996/split-audio-files-using-silence-detection)
 [ReplayGain](https://wiki.hydrogenaud.io/index.php/ReplayGain)
